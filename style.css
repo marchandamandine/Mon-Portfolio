@@ -1,121 +1,52 @@
-.entetenom,
-.entetefonction,
-.entetesecteur,
-.enteteformation,
-.entetesoustitre{
+.nom,
+.fonction,
+.secteur,
+.statut,
+.soustitre{
     font-family: "Oswald", sans-serif;
 }
 
+.nom{
+    font-size: 3em;
+}
 
+.fonction,
+.secteur,
+.statut{
+    font-size: 2em;
+}
+
+.soustitre{
+    font-size:1.8em;
+    font-weight: 300;
+    text-align : center;
+}
 
 li{
     font-family: "Pompiere", sans-serif;
 }
 
-
-/* grid de l'entete*/
 .entete{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 150px 150px 150px 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:none;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
 }
 
-.entetelogo{
-    grid-column: 1/2;
-    grid-row: 1/5;
-    justify-self: center;
-    align-self: center;
-
-    border:1px solid black;
+.entete1{
+    text-align:  center;
+    justify-content: center;
+    width:50%;
 }
 
 #entetelogo{
-    height:200px;
+    height : 150px;
     width:auto;
-}
-
-.entetephoto{
-    grid-column: 3/4;
-    grid-row: 1/5;
-
-    border:1px solid black;
 }
 
 #entetephoto{
-    height:250px;
+    height : 250px;
     width:auto;
 }
-
-.entetenom{
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-    border:1px solid black;
-}
-
-.entetefonction{
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-    border:1px solid black;
-}
-
-.enteteformation{
-    grid-column: 2/3;
-    grid-row: 3/4;
-
-    border:1px solid black;
-}
-
-.entetesecteur{
-    grid-column: 2/3;
-    grid-row:4/5;
-
-    border:1px solid black;
-}
-
-.entetesoustitre{
-    grid-column: 1/4;
-    grid-row:5/6;
-
-    border:1px solid black;
-}
-
-
-/* grid des competences */
-
-
-.competences{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 200px ;
-}
-#competencesimage{
-    max-width:300px;
-    height:auto;
-}
-.competence0{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    
-    border:1px solid red;
-}
-.competence1{
-    grid-column: 1/2;
-    grid-row: 2/3;
-
-    border:1px solid red;
-}
-.competence2{
-    grid-column: 2/3;
-    grid-row: 1/3;
-
-    border:1px solid red;
-}
-
-
-/* formation */
-
-
-
-/* grid des parcours */
