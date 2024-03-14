@@ -1,3 +1,5 @@
+/* définition des polices*/
+
 .nom,
 .fonction,
 .secteur,
@@ -6,6 +8,7 @@
     font-family: "Oswald", sans-serif;
 }
 
+/* polices */
 .nom{
     font-size: 3em;
 }
@@ -16,20 +19,42 @@
     font-size: 2em;
 }
 
+/* interlignes et retours à la ligne*/
+
+br{ 
+    line-height: 40px;
+}
+
+li{
+    line-height: 30px;
+}
+
+
+body{   /*image de fond*/
+    background-image:url("visuels/fond.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
 .soustitre{
     font-size:1.8em;
     font-weight: 300;
     text-align : center;
 }
 
-li{
+li,
+.competence2{
     font-family: "Pompiere", sans-serif;
+    font-size:1.3em;
 }
 
-.entete{
+.entete{   /*mise en page de l'entête*/
     display: flex;
     flex-direction: row;
     flex-wrap:none;
+    margin-top:20px;
     align-content: stretch;
     align-items: center;
     justify-content: center;
@@ -49,4 +74,104 @@ li{
 #entetephoto{
     height : 250px;
     width:auto;
+}
+
+
+.competences{  /*mise en page des compétences*/
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 350px;
+}
+
+#competencesimage{
+    height:55px;
+    width:auto;
+}
+
+.competence0{
+    grid-column: 1/2;
+    grid-row:1/2;
+    margin-left: 250px;
+    border: 1px solid black;
+}
+
+.competence1{
+    grid-column: 1/2;
+    grid-row:2/3;
+    margin-left: 300px;
+    border: 1px solid black;
+}
+
+.competence2{
+    grid-column: 2/3;
+    grid-row:2/3;
+    margin-left: -150px;
+    align-items: center;
+    place-content: center;
+    margin-right:100px;
+    border: 1px solid black;
+}
+
+
+/* mise en page des formations*/
+
+#formationimage{
+    height:55px;
+    width:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.formation0{
+    display:flex;
+        justify-content: center;
+}
+.formation1{
+    display:flex;
+    justify-content: center;
+}
+
+.parcours{  /*mise en page du parcours*/
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 450px 50px;
+}
+
+#parcoursimage{
+    height:55px;
+    width:auto;
+}
+
+.parcours0{
+    grid-column: 1/2;
+    grid-row:1/2;
+   margin-left: 250px;
+    border: 1px solid black;
+}
+
+.parcours1{
+    grid-column: 1/2;
+    grid-row:2/3;
+       margin-left: 50px;
+    border: 1px solid black;
+}
+
+.parcours2{
+    grid-column: 2/3;
+    grid-row:2/3;
+    margin-left: -100px;
+    align-items: center;
+    place-content: center;
+    margin-right:100px;
+    border: 1px solid black;
+}
+.parcours3{
+    grid-column: 2/3;
+    grid-row:3/4;
+    margin-left: -150px;
+    align-items: center;
+    place-content: center;
+    margin-right:100px;
+    border: 1px solid black;
 }
