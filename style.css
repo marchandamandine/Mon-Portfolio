@@ -1,3 +1,5 @@
+/* définition des polices*/
+
 .nom,
 .fonction,
 .secteur,
@@ -6,8 +8,9 @@
     font-family: "Oswald", sans-serif;
 }
 
+/* polices */
 .nom{
-    font-size: 3em;
+    font-size: 3.2em;
 }
 
 .fonction,
@@ -16,20 +19,53 @@
     font-size: 2em;
 }
 
+/* interlignes et retours à la ligne*/
+
+br{ 
+    margin-bottom: 20px;
+}
+
+li{
+    line-height: 40px;
+    list-style-type: none;
+    font-family: "Pompiere", sans-serif;
+    font-size:1.7em;
+}
+
+
+body{   /*image de fond*/
+    background-image:url("visuels/fond.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
 .soustitre{
     font-size:1.8em;
     font-weight: 300;
     text-align : center;
 }
 
-li{
+.parcours1,
+.parcours3{
     font-family: "Pompiere", sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
-.entete{
+.competence2,
+.parcours5,
+.parcours6{
+    font-family: "Pompiere", sans-serif;
+    font-size:1.7em;
+}
+
+.entete{   /*mise en page de l'entête*/
     display: flex;
     flex-direction: row;
     flex-wrap:none;
+    margin-top:20px;
     align-content: stretch;
     align-items: center;
     justify-content: center;
@@ -49,4 +85,152 @@ li{
 #entetephoto{
     height : 250px;
     width:auto;
+}
+
+
+.competences{  /*mise en page des compétences*/
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 500px;
+}
+
+#competencesimage{
+    height:55px;
+    width:auto;
+}
+
+.competence0{ /* image titre*/
+    grid-column: 1/2;
+    grid-row:1/2;
+    margin-left: 250px;
+}
+
+.competence1{ /*listing des compétences*/
+    grid-column: 1/2;
+    grid-row:2/3;
+    display: flex;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-right:150px;
+    padding-left:-150px;
+    text-align: center;
+    justify-content: center;
+}
+
+.competence2{ /*explications compétences*/
+    grid-column: 2/3;
+    grid-row:2/3;
+    margin-left: -180px;
+    padding-top:60px;
+    text-align: justify;
+    align-items: center;
+    place-content: center;
+    margin-right:100px;
+}
+
+
+/* mise en page des formations*/
+
+#formationimage{
+    height:55px;
+    width:auto;
+    margin-top:40px;
+    margin-bottom:20px;
+}
+.formation0{
+    display:flex;
+    justify-content: center;
+}
+.formation1{
+    display:flex;
+    justify-content: center;
+}
+
+.annee1,
+.annee2,
+.annee3,
+.annee4,
+.annee5,
+.annee6,
+.annee7,
+.annee8,
+.annee9,
+.annee10{
+    font-weight:700;
+    color:#522d27;
+    background-color: rgba(248, 201, 130, 0.7);
+    border-radius: 8px;
+    padding:2px;
+    margin-top:10px;
+}
+
+.parcours{  /*mise en page du parcours*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 170px 70px 150px 70px 150px 50px;
+}
+
+#parcoursimage{
+    height:55px;
+    width:auto;
+}
+
+.parcours0{ /*image titre*/
+    margin-top: 50px;
+    grid-column: 1/2;
+    grid-row:1/2;
+    margin-top:80px;
+    margin-left: 250px;
+    border: 1px solid black;
+}
+
+.parcours1{
+    display: flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row:2/3;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+.parcours2{
+    display: flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row:3/4;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+.parcours3{
+    display: flex;
+    grid-column: 1/2;
+    grid-row:4/5;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+.parcours4{
+    display: flex;
+    grid-column: 1/2;
+    grid-row:5/6;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+.parcours5{
+    display:flex;
+    grid-column: 2/3;
+    grid-row:2/6;
+    margin-right: 50px;
+    margin-left:-100px;
+    border: 1px solid black;
+}
+.parcours6{
+    display:flex;
+    grid-column: 1/3;
+    grid-row:6/7;
+    font-weight: 700;
+    font-size: 1.9em;
+    margin-right: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
