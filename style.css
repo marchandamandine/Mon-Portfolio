@@ -4,7 +4,10 @@
 .fonction,
 .secteur,
 .statut,
-.soustitre{
+.soustitre,
+.realisations1,
+.realisations2,
+.realisations3{
     font-family: "Oswald", sans-serif;
 }
 
@@ -168,7 +171,7 @@ body{   /*image de fond*/
 .parcours{  /*mise en page du parcours*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 170px 70px 150px 70px 150px 50px;
+    grid-template-rows: 170px 70px 150px 70px 140px 100px;
 }
 
 #parcoursimage{
@@ -182,7 +185,6 @@ body{   /*image de fond*/
     grid-row:1/2;
     margin-top:80px;
     margin-left: 250px;
-    border: 1px solid black;
 }
 
 .parcours1{
@@ -191,7 +193,6 @@ body{   /*image de fond*/
     grid-column: 1/2;
     grid-row:2/3;
     margin-left: 150px;
-    border: 1px solid black;
 }
 .parcours2{
     display: flex;
@@ -199,21 +200,18 @@ body{   /*image de fond*/
     grid-column: 1/2;
     grid-row:3/4;
     margin-left: 150px;
-    border: 1px solid black;
 }
 .parcours3{
     display: flex;
     grid-column: 1/2;
     grid-row:4/5;
     margin-left: 150px;
-    border: 1px solid black;
 }
 .parcours4{
     display: flex;
     grid-column: 1/2;
     grid-row:5/6;
     margin-left: 150px;
-    border: 1px solid black;
 }
 .parcours5{
     display:flex;
@@ -221,7 +219,6 @@ body{   /*image de fond*/
     grid-row:2/6;
     margin-right: 50px;
     margin-left:-100px;
-    border: 1px solid black;
 }
 .parcours6{
     display:flex;
@@ -230,7 +227,53 @@ body{   /*image de fond*/
     font-weight: 700;
     font-size: 1.9em;
     margin-right: 50px;
-    align-items: center;
+    align-items:center;
     justify-content: center;
-    border: 1px solid black;
+    margin-bottom:50px;
+}
+
+
+.realisations{  /*mise en page des réalisations*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap:none;
+    margin-top:20px;
+    align-content: stretch;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+
+
+#realisationimage{
+    display:flex;
+    height:55px;
+    width:auto;
+    margin-top:80px;
+    margin-left: 250px;
+}
+
+.realisations1{
+    border:1px solid black;
+    box-shadow:1px 1px 1px bisque;
+    width:400px;
+    height:250px;
+    background-image:url(visuels/capturesitecv.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    font-size:2.8em;
+    font-weight: 800;
+}
+
+.realisations2{
+    width:380px;
+    height:200px;
+    border:1px solid black;
+}
+.realisations3{
+    width:380px;
+    height:200px;
+    border:1px solid black;
 }
