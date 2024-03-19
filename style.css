@@ -1,4 +1,4 @@
-/* définition des polices*/
+/*définition des polices*/
 
 .nom,
 .fonction,
@@ -7,36 +7,79 @@
 .soustitre,
 .realisations1,
 .realisations2,
-.realisations3{
+.realisations3,
+.contact,
+#cv{
     font-family: "Oswald", sans-serif;
 }
-
-/* polices */
 .nom{
     font-size: 3.2em;
 }
-
 .fonction,
 .secteur,
 .statut{
     font-size: 2em;
 }
-
-/* interlignes et retours à la ligne*/
-
-br{ 
-    margin-bottom: 20px;
+.parcours1,
+.parcours3{
+    font-family: "Pompiere", sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
 }
-
-li{
-    line-height: 40px;
-    list-style-type: none;
+.competence2,
+.parcours5{
     font-family: "Pompiere", sans-serif;
     font-size:1.7em;
 }
+.parcours6{
+    font-family: "Pompiere", sans-serif;
+    font-size: 2em;
+}
+.soustitre,
+.contact{
+    font-size:1.8em;
+    font-weight: 300;
+}
+#cv{
+    font-size:0.8em;
+}
+li{
+    font-family: "Pompiere", sans-serif;
+    font-size:1.7em;
+}
+.realisations p{
+    font-size:2.8em;
+    font-weight: 800;
+}
 
 
-body{   /*image de fond*/
+/*mise en page générale des liens*/
+a:visited,
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* interlignes, retours à la ligne et listes*/
+.competences ul, 
+.formation ul{
+    margin:0px;
+    padding:0px;
+}
+br{ 
+    margin-bottom: 20px;
+}
+li{
+    line-height: 40px;
+    list-style-type: none;
+}
+
+
+
+/*image de fond générale*/
+body{ 
     background-image:url("visuels/fond.svg");
     background-size: cover;
     background-position: center;
@@ -44,27 +87,8 @@ body{   /*image de fond*/
 
 
 
-.soustitre{
-    font-size:1.8em;
-    font-weight: 300;
-    text-align : center;
-}
-
-.parcours1,
-.parcours3{
-    font-family: "Pompiere", sans-serif;
-    font-size: 1.8em;
-    font-weight: 600;
-}
-
-.competence2,
-.parcours5,
-.parcours6{
-    font-family: "Pompiere", sans-serif;
-    font-size:1.7em;
-}
-
-.entete{   /*mise en page de l'entête*/
+/*mise en page de l'entête*/
+.entete{
     display: flex;
     flex-direction: row;
     flex-wrap:none;
@@ -73,84 +97,88 @@ body{   /*image de fond*/
     align-items: center;
     justify-content: center;
 }
-
 .entete1{
     text-align:  center;
     justify-content: center;
     width:50%;
 }
-
 #entetelogo{
     height : 150px;
     width:auto;
 }
-
 #entetephoto{
     height : 250px;
     width:auto;
 }
 
 
-.competences{  /*mise en page des compétences*/
-    margin-top:50px;
+
+/*mise en page du sous titre*/
+.soustitre{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 500px;
+    text-align : center;
+    margin-bottom:80px;
 }
 
-#competencesimage{
+
+
+/*mise en page des compétences*/
+.competences{ /*bloc compétences*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 470px;
+}
+#competencesimage{ /* image titre*/
     height:55px;
     width:auto;
 }
-
 .competence0{ /* image titre*/
     grid-column: 1/2;
     grid-row:1/2;
-    margin-left: 250px;
+    display: flex;
+    margin-right:210px;
+    padding-left:-210px;
+    text-align: center;
+    justify-content: center;
 }
-
 .competence1{ /*listing des compétences*/
     grid-column: 1/2;
     grid-row:2/3;
     display: flex;
     font-weight: 700;
-    margin-left: 50px;
-    margin-right:150px;
-    padding-left:-150px;
+    margin-right:210px;
+    padding-left:-210px;
     text-align: center;
     justify-content: center;
 }
-
 .competence2{ /*explications compétences*/
     grid-column: 2/3;
     grid-row:2/3;
-    margin-left: -180px;
-    padding-top:60px;
+    margin-left: -210px;
     text-align: justify;
     align-items: center;
     place-content: center;
-    margin-right:100px;
+    margin-right:210px;
 }
+
 
 
 /* mise en page des formations*/
-
-#formationimage{
+#formationimage{ /*image formation*/
     height:55px;
     width:auto;
-    margin-top:40px;
-    margin-bottom:20px;
+    margin-top:0px;
+    margin-bottom:50px;
 }
-.formation0{
+.formation0{ /*image formation*/
     display:flex;
     justify-content: center;
 }
-.formation1{
+.formation1{ /*listing des formations*/
     display:flex;
     justify-content: center;
 }
-
-.annee1,
+.annee1,  /*années des formations*/
 .annee2,
 .annee3,
 .annee4,
@@ -168,72 +196,81 @@ body{   /*image de fond*/
     margin-top:10px;
 }
 
-.parcours{  /*mise en page du parcours*/
+
+
+/*mise en page du parcours pro*/
+.parcours{   /*bloc du parcours*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 170px 70px 150px 70px 140px 100px;
+    grid-template-rows: 200px 70px 140px 70px 160px 100px;
 }
-
-#parcoursimage{
+#parcoursimage{ /*image du parcours*/
     height:55px;
     width:auto;
 }
-
-.parcours0{ /*image titre*/
-    margin-top: 50px;
+.parcours0{ /*image parcours*/
     grid-column: 1/2;
     grid-row:1/2;
-    margin-top:80px;
     margin-left: 250px;
+    margin-top: 100px;
 }
-
-.parcours1{
+.parcours1{ /*Lidl Lillers*/
     display: flex;
     align-items: center;
     grid-column: 1/2;
     grid-row:2/3;
     margin-left: 150px;
 }
-.parcours2{
+.parcours2{ /*expériences Lidl Lillers*/
     display: flex;
     align-items: center;
     grid-column: 1/2;
     grid-row:3/4;
     margin-left: 150px;
 }
-.parcours3{
+.parcours3{ /*Lidl Barbery*/
     display: flex;
     grid-column: 1/2;
     grid-row:4/5;
     margin-left: 150px;
 }
-.parcours4{
+.parcours4{ /*expérience Lidl barbery*/
     display: flex;
     grid-column: 1/2;
     grid-row:5/6;
     margin-left: 150px;
 }
-.parcours5{
+.parcours5{ /*explications parcours*/
     display:flex;
     grid-column: 2/3;
     grid-row:2/6;
-    margin-right: 50px;
-    margin-left:-100px;
+    margin-right: 100px;
+    margin-left:-150px;
+    text-align: justify;
 }
-.parcours6{
+.parcours6{ /*mon CV ici*/
     display:flex;
     grid-column: 1/3;
     grid-row:6/7;
-    font-weight: 700;
-    font-size: 1.9em;
-    margin-right: 50px;
+    font-weight: 900;
+    text-decoration: underline overline rgb(99, 67, 41);
     align-items:center;
     justify-content: center;
-    margin-bottom:50px;
+    margin-bottom:100px;
+}
+#cv{   /*mise en forme du lien qui mène au CV*/
+    color:rgb(57, 40, 26);
+
+}
+#cv:hover{  
+    background-color: rgba(248, 201, 130, 0.7);
+    border-radius:8px;
 }
 
 
-.realisations{  /*mise en page des réalisations*/
+
+/*mise en page des réalisations*/
+.realisations{  /*bloc des réalisations*/
     display: flex;
     flex-direction: row;
     flex-wrap:none;
@@ -241,39 +278,258 @@ body{   /*image de fond*/
     align-content: stretch;
     align-items: center;
     justify-content: space-around;
-
-    
 }
-
-
-#realisationimage{
-    display:flex;
+.realisation0{ /*image titre des réalisations*/
+    display: flex;
+    justify-content: center;
+}
+#realisationimage{ /*image titre des réalisations*/
     height:55px;
     width:auto;
-    margin-top:80px;
-    margin-left: 250px;
+    justify-content: center;
+    align-items:center;
 }
-
-.realisations1{
-    border:1px solid black;
-    box-shadow:1px 1px 1px bisque;
+.realisations1, /*les projets*/
+.realisations2,
+.realisations3{
+    border:2px solid rgb(99, 67, 41);
     width:400px;
     height:250px;
+}
+.realisations1{ /*projet du Portfolio*/
     background-image:url(visuels/capturesitecv.png);
     background-position: center;
     background-size:cover;
     background-repeat:no-repeat;
-    font-size:2.8em;
-    font-weight: 800;
+}
+.realisations2{ /*projet C'est Veggie*/
+    background-image:url(visuels/capturecveggie.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.realisations3{ /*projet chaine Youtube*/
+    background-image:url(visuels/captureyoutube.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.realisations p{
+    background-color: rgba(248, 201, 130, 0.7);
+    width:100%;
+    text-align:center;
+}
+.realisations br{ 
+    margin-bottom: 0px;
+}
+.realisations1:hover,
+.realisations2:hover,
+.realisations3:hover{
+    background-color: black;
+    opacity:30%;
+    box-shadow: 10px 5px 5px #522d27;
 }
 
-.realisations2{
-    width:380px;
-    height:200px;
-    border:1px solid black;
+
+
+/*mise en page des contacts*/
+.contact0{ /*image titre des réalisations*/
+    display: flex;
+    margin-top:90px;
 }
-.realisations3{
-    width:380px;
-    height:200px;
-    border:1px solid black;
+#contactimage{ /*image titre des réalisations*/
+    height:55px;
+    width:auto;
 }
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#mail,
+#github,
+#linkedin{
+    height:70px;
+    width:auto;
+}
+.contact1{
+    align-items: center;
+}
+.contact2,
+.contact3,
+.contact4{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+
+/* Responsive Design*/
+
+@media screen and (max-width:1700px){
+    .parcours0{ /*image parcours*/
+        margin-left: 200px;
+    }
+    .parcours1{ /*Lidl Lillers*/
+        margin-left: 100px;
+    }
+    .parcours2{ /*expériences Lidl Lillers*/
+        margin-left: 100px;
+    }
+    .parcours3{ /*Lidl Barbery*/
+        margin-left: 100px;
+    }
+    .parcours4{ /*expérience Lidl barbery*/
+        margin-left: 100px;
+    }
+    .parcours5{ /*explications parcours*/
+        margin-right: 100px;
+        margin-left:-100px;
+    }
+}
+
+@media screen and (max-width:1600px){
+    .competence2{ /*explications compétences*/
+        margin-right:150px;
+    }
+}
+
+@media screen and (max-width:1500px){
+    .parcours5{
+        margin-left:-50px;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .parcours5{
+        margin-left:0px;
+    }
+    .nom{
+        font-size: 3em;
+    }
+    .fonction,
+    .secteur,
+    .statut{
+        font-size: 1.6em;
+    }
+    .parcours1,
+    .parcours3{
+        font-size: 1.6em;
+    }
+    .competence2,
+    .parcours5,
+    .parcours6{
+        font-size:1.6em;
+    }
+    .soustitre,
+    .contact{
+        font-size:1.6em;
+    }
+    #cv{
+        font-size:0.8em;
+    }
+    li{
+        font-size:1.5em;
+    }
+}
+
+@media screen and (max-width:1250px){
+    .soustitre{
+        font-size:1.4em;
+    }
+    .realisations1,
+    .realisations2,
+    .realisations3{
+        width:350px;
+        height:200px;
+    }
+    .realisations p{
+        font-size:2.5em;
+    }
+    .parcours1,
+    .parcours2,
+    .parcours3,
+    .parcours4{
+        margin-left: 50px;
+    }
+    .competence2,
+    .parcours5,
+    .parcours6{
+        font-size:1.5em;
+    }
+    .competence2{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .parcours5,
+    .competence2{
+        margin-right: 50px;
+    }
+    .realisations1,
+    .realisations2,
+    .realisations3{
+        width:300px;
+        height:200px;
+    }
+    .contact{
+        font-size:1.3em;
+    }
+    .soustitre{
+        font-size:1.3em;
+        margin-bottom:40px;
+    }
+    li{
+        font-size:1.4em;
+    }
+    #competencesimage,
+    #formationimage,
+    #parcoursimage,
+    #realisationimage,
+    #contactimage{
+        height:45px;
+        width:auto;
+    }
+    #entetelogo{
+        height : 100px;
+        width:auto;
+    }
+    #entetephoto{
+        height : 200px;
+        width:auto;
+    }
+    .competences{ /*bloc compétences*/
+        grid-template-rows: 80px 450px;
+    }
+    #mail,
+    #github,
+    #linkedin{
+        height:50px;
+        width:auto;
+    }
+    .realisations p{
+        font-size:2.2em;
+    }
+}
+
+@media screen and (max-width:1050px){
+    .competence2,
+    .parcours5,
+    .parcours6{
+        font-size:1.4em;
+    }
+    .soustitre{
+        font-size:1.2em;
+    }
+    .nom{
+        font-size: 3em;
+    }
+    .fonction,
+    .secteur,
+    .statut{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max)
