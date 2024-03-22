@@ -8,7 +8,8 @@
 .realisations1,
 .realisations2,
 .realisations3,
-.contact,
+.contact1,
+.navig,
 #cv{
     font-family: "Oswald", sans-serif;
 }
@@ -36,9 +37,12 @@
     font-size: 2em;
 }
 .soustitre,
-.contact{
+.contact1{
     font-size:1.8em;
     font-weight: 300;
+}
+.navig{
+    font-size:1.4em;
 }
 #cv{
     font-size:0.8em;
@@ -80,7 +84,7 @@ li{
 
 /*image de fond générale*/
 body{ 
-    background-image:url("visuels/fond.svg");
+    background-image:url("visuels/fond.png");
     background-size: cover;
     background-position: center;
 }
@@ -125,9 +129,36 @@ body{
 .soustitre{
     display: grid;
     text-align : center;
-    margin-bottom:80px;
+    margin-bottom:30px;
 }
 
+/* mise en page de la navigation*/
+.navig{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: none;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5{
+    width:300px;
+    height:50px;
+    border:2px solid #694336;
+    border-radius: 15px;
+    background-color: #e3d1c7;
+}
+.menu1:hover,
+.menu2:hover,
+.menu3:hover,
+.menu4:hover,
+.menu5:hover{
+    opacity:60%;
+    box-shadow: 10px 5px 5px #522d27;
+}
 
 
 /*mise en page des compétences*/
@@ -332,8 +363,7 @@ body{
 .realisations1:hover,
 .realisations2:hover,
 .realisations3:hover{
-    background-color: black;
-    opacity:30%;
+    opacity:60%;
     box-shadow: 10px 5px 5px #522d27;
 }
 
@@ -400,6 +430,13 @@ body{
     .competence2{ /*explications compétences*/
         margin-right:100px;
     }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:250px;
+    }
 }
 
 @media screen and (max-width:1500px){
@@ -409,6 +446,17 @@ body{
 }
 
 @media screen and (max-width:1400px){
+    .navig{
+        flex-wrap: wrap;
+        font-size: 1.3em;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:220px;
+    }
     .parcours5{
         margin-left:0px;
     }
@@ -430,7 +478,7 @@ body{
         font-size:1.6em;
     }
     .soustitre,
-    .contact{
+    .contact1{
         font-size:1.6em;
     }
     #cv{
@@ -444,6 +492,14 @@ body{
 @media screen and (max-width:1250px){
     .soustitre{
         font-size:1.4em;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:200px;
+        font-size: 1em;
     }
     .realisations1,
     .realisations2,
@@ -481,7 +537,7 @@ body{
         width:300px;
         height:200px;
     }
-    .contact{
+    .contact1{
         font-size:1.3em;
     }
     .soustitre{
@@ -523,6 +579,27 @@ body{
 
 
 @media all and (max-width:1050px){
+    .soustitre{
+        margin-bottom: 10px;
+    }
+    .navig{
+        font-size: 1.2em;
+        margin-left: 20px;
+        margin-right: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:260px;
+        height:40px;
+    }
+    .competences{
+        margin-top: 20px;
+    }
     .competence2,
     .parcours5,
     .parcours6{
@@ -542,6 +619,13 @@ body{
 }
 
 @media all and (max-width:1000px){
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:200px;
+    }
     .formation1{
         margin-bottom:50px;
     }
@@ -580,11 +664,22 @@ body{
 }
 
 @media all and (max-width:950px){
+    .navig{
+        font-size: 1.1em;
+        margin-left:10px;
+        margin-right: 10px;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:130px;
+    }
     .soustitre{
         margin:20px;
         font-size: 1.5em;
     }
-    
     .realisations{
         display: flex;
         flex-wrap:wrap;
@@ -600,14 +695,15 @@ body{
     .competences{
         display: flex;
         flex-direction: column;
-        margin:0px;
+        margin-top: 30px;
+        margin-right:0px;
         padding:0px;
         justify-content: center;
         align-content: center;
     }
     .competence0{
         align-items: center;
-        margin-bottom:20px;
+        margin-bottom:0px;
     }
     #competencesimage{
         height: 45px;
@@ -623,6 +719,35 @@ body{
 }
 
 @media all and (max-width:850px){
+    .navig{
+        background-color: #694336;
+        justify-content:space-around;
+        align-items: center;
+        margin:0px;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        border: none;
+        border-radius: 0px;
+        width:auto;
+        margin-bottom:0px;
+    }
+    .menu1:hover,
+    .menu2:hover,
+    .menu3:hover,
+    .menu4:hover,
+    .menu5:hover{
+        border-radius: 0px;
+        background-color:  #865342;
+        opacity:50%;
+    }
+    .navig a{
+        color:white;
+    }
+
     .nom{
         font-size: 2.8em;
     }
@@ -643,6 +768,14 @@ body{
 
 
 @media all and (max-width:750px){
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:100px;
+        height:40px;
+    }
     .entete{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -666,6 +799,7 @@ body{
         width:200px;
         display: flex;
         margin-left:20px;
+        margin-top:30px;
     }
     .entetelogo{
         grid-column: 1/2;
@@ -673,6 +807,7 @@ body{
         display: flex;
         width:200px;
         margin-left:20px;
+        margin-top:20px;
     }
     #entetelogo {
         height: 80px;
@@ -685,6 +820,255 @@ body{
 }
 
 @media all and (max-width:650px){
-
-    
+    .navig{
+        font-size: 1.1em;
+        justify-content: center;
+        margin-left :10px;
+        margin-right:10px;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:auto;
+        height:40px;
+    }
+    .entete1{
+        width:350px;
+    }
+    .entetephoto,
+    .entetelogo{
+        width:150px;
+    }
+    .nom{
+        font-size: 2.6em;
+    }
+    .fonction,
+    .secteur,
+    .statut{
+        font-size: 1.4em;
+    }
+    .soustitre {
+        font-size: 1.2em;
+    }
+    #competencesimage,
+    #formationimage,
+    #parcoursimage,
+    #realisationsimage,
+    #contactimage{
+        height:40px;
+        width:auto;
+    }
+    .realisations1,
+    .realisations2,
+    .realisations3{
+        width:350px;
+        height:200px;
+    }
+    .realisations p{
+        font-size:2em;
+    }
+    .contact2,
+    .contact3,
+    .contact4{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    #contact2,
+    #contact3,
+    #contact4{
+        width:15px;
+        height:auto;
+    }
 }
+
+@media all and (max-width:600px){
+    .entete1{
+        width:300px;
+    }
+    .nom{
+        font-size: 2.2em;
+    }
+    .fonction,
+    .secteur,
+    .statut{
+        font-size: 1.3em;
+    }
+    #entetelogo {
+        height: 70px;
+        width: auto;
+    }
+    #entetephoto {
+        height: 110px;
+        width: auto;
+    }
+    .menu1,
+    .menu2,
+    .menu3,
+    .menu4,
+    .menu5{
+        width:120px;
+        height:30px;
+    }
+    .competences{
+        margin-top: 20px;
+    }
+    .competence2,
+    .parcours5,
+    .parcours6{
+        font-size:1.2em;
+    }
+    .competence1,
+    .formation1,
+    .parcours2,
+    .parcours4{
+        font-size:0.9em;
+    }
+    .parcours1,
+    .parcours3{
+        font-size:1.4em;
+    }
+    .realisations p{
+        font-size:1.8em;
+    }
+    .contact1{
+        font-size:1.2em;
+    }
+    .contact{
+        flex-wrap: wrap;
+    }
+    .contact1{
+        width:100%;
+    }
+    .contact2,
+    .contact3,
+    .contact4{
+        margin-top: -20px;
+    }
+    .navig{
+        display: flex;
+        flex-direction: column;
+        width:150px;
+        height:auto;
+        border-radius: 20px;
+        justify-content: center;
+        align-content: center;
+    }
+    .menu1:hover,
+    .menu2:hover,
+    .menu3:hover,
+    .menu4:hover,
+    .menu5:hover{
+        border-radius: 20px;
+        background-color:  #865342;
+        opacity:50%;
+    }
+    .soustitre{
+        margin-top:-120px;
+        position: relative;
+        right:-30%;
+        bottom: -140px;
+        width:60%;
+    }
+}
+
+
+@media all and (max-width:550px){
+    .soustitre{
+        font-size:1.1em;
+    }
+    .navig{
+        font-size: 1em;
+        margin-left:5px;
+        margin-right: 5px;
+        width:120px;
+    }
+    .entetephoto,
+    .entetelogo{
+        width:100px;
+    }
+    .entete1{
+        margin-right:10px;
+    }
+    .soustitre {
+        margin-right:5px;
+    }
+}
+
+
+@media all and (max-width:500px){
+    .entete{
+        width:270px;
+        margin-bottom: 10px;
+    }
+    .entete br{
+        line-height: 10px;
+    }
+    #entetephoto,
+    #entetelogo{
+        margin-left:190px;
+    }
+    .entete1{
+        margin-right:0px;
+        margin-left:50px;
+        margin-top:120px;
+    }
+}
+
+
+@media all and (max-width:450px){
+    .entete{
+        width:270px;
+        margin-bottom: 10px;
+    }
+    .entete br{
+        line-height: 10px;
+    }
+    #entetephoto{
+        margin-left:50px;
+    }
+    .entete1{
+        margin-right:0px;
+        margin-left:-50px;
+        margin-top:120px;
+    }
+    .entetelogo{
+        display: none;
+    }
+    .secteur{
+        margin-bottom: 100px;
+    }
+    .soustitre{
+        display: none;
+    }
+    .navig{
+        display:none;
+    }
+    .formation1{
+        margin-right: 20px;
+        margin-left:20px;
+    }
+    .realisations1,
+    .realisations2,
+    .realisations3{
+        margin-right: 20px;
+        margin-left:20px;
+    }
+
+}
+
+
+@media all and (max-width:400px){
+    #entetephoto{
+        margin-left:-120px;
+        margin-top:-40px;
+        width:80px;
+        height:auto;
+    }
+    .entete1{
+        margin-right:0px;
+        margin-left:-180px;
+        margin-top:120px;
+    }
+    }
