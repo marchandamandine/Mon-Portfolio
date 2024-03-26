@@ -1,6 +1,15 @@
 *{
     scroll-behavior: smooth;
 }
+strong{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+
 
 /*définition des polices*/
 
@@ -55,11 +64,12 @@ li{
     font-family: "Pompiere", sans-serif;
     font-size:1.7em;
 }
-.realisations p{
-    font-size:2.8em;
-    font-weight: 800;
+.realisations{
+    font-weight: 600;
 }
-
+.realisations button{
+    font-size:2.3rem;
+}
 
 /*mise en page générale des liens*/
 a:visited,
@@ -139,30 +149,42 @@ body{
 /* mise en page de la navigation*/
 .navig{
     display:flex;
+    background-color: #694336;
     justify-content: space-around;
     flex-wrap: none;
     align-items: center;
+    margin:0px;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 .menu1,
 .menu2,
 .menu3,
 .menu4,
 .menu5{
-    width:300px;
+    margin-bottom:0px;
     height:50px;
-    border:2px solid #694336;
-    border-radius: 15px;
-    background-color: #e3d1c7;
+    width:100%;
+    transition-duration: 0.4s;
+}
+.menu1 a:hover,
+.menu2 a:hover,
+.menu3 a:hover,
+.menu4 a:hover,
+.menu5 a:hover{
+    color:#522d27;
 }
 .menu1:hover,
 .menu2:hover,
 .menu3:hover,
 .menu4:hover,
 .menu5:hover{
-    opacity:60%;
-    box-shadow: 10px 5px 5px #522d27;
+    background-color: #e3d1c7;
 }
+.navig a{
+    color:white;
+}
+
 
 
 /*mise en page des compétences*/
@@ -334,41 +356,60 @@ body{
 .realisations1, /*les projets*/
 .realisations2,
 .realisations3{
-    border:2px solid rgb(99, 67, 41);
-    width:400px;
-    height:250px;
+    width:450px;
+    height:300px;
+
 }
-.realisations1{ /*projet du Portfolio*/
-    background-image:url(visuels/capturesitecv.png);
+.realisations1 button{ /*projet du Portfolio*/
+    background-image:url(visuels/capturesitecvtrans.png);
     background-position: center;
     background-size:cover;
     background-repeat:no-repeat;
 }
-.realisations2{ /*projet C'est Veggie*/
-    background-image:url(visuels/capturecveggie.png);
+.realisations2 button{ /*projet C'est Veggie*/
+    background-image:url(visuels/capturecveggietrans.png);
     background-position: center;
     background-size:cover;
     background-repeat:no-repeat;
 }
-.realisations3{ /*projet chaine Youtube*/
-    background-image:url(visuels/captureyoutube.png);
+.realisations3 button{ /*projet chaine Youtube*/
+    background-image:url(visuels/captureyoutubetrans.png);
     background-position: center;
     background-size:cover;
     background-repeat:no-repeat;
 }
-.realisations p{
-    background-color: rgba(248, 201, 130, 0.7);
+.realisations{
     width:100%;
     text-align:center;
 }
 .realisations br{ 
     margin-bottom: 0px;
 }
-.realisations1:hover,
-.realisations2:hover,
-.realisations3:hover{
-    opacity:60%;
+.realisations1 button:hover{ /*projet du Portfolio*/
+    background-image:url(visuels/capturesitecv.png);
     box-shadow: 10px 5px 5px #522d27;
+    cursor:pointer;
+    transform:scale(1.1);
+}
+.realisations2 button:hover{ /*projet C'est Veggie*/
+    background-image:url(visuels/capturecveggie.png);
+    box-shadow: 10px 5px 5px #522d27;
+    cursor:pointer;
+    transform:scale(1.1);
+}
+.realisations3 button:hover{ /*projet chaine Youtube*/
+    background-image:url(visuels/captureyoutube.png);
+    box-shadow: 10px 5px 5px #522d27;
+    cursor:pointer;
+    transform:scale(1.1);
+}
+.realisations button{
+    font-size:2.3rem;
+    font-weight: 800;
+    border:0px;
+    width:400px;
+    height:250px;
+    border:2px solid #522d27;
 }
 
 
@@ -402,6 +443,11 @@ body{
     padding-left:20px;
     padding-right:20px;
 }
+#mail:hover,
+#github:hover,
+#linkedin:hover{
+    transform:scale(1.25);
+}
 
 
 
@@ -409,20 +455,12 @@ body{
 /* Responsive Design*/
 
 @media screen and (max-width:1700px){
-    .parcours0{ /*image parcours*/
+    .parcours0,
+    .parcours1,
+    .parcours2,
+    .parcours3,
+    .parcours4{
         margin-left: 200px;
-    }
-    .parcours1{ /*Lidl Lillers*/
-        margin-left: 100px;
-    }
-    .parcours2{ /*expériences Lidl Lillers*/
-        margin-left: 100px;
-    }
-    .parcours3{ /*Lidl Barbery*/
-        margin-left: 100px;
-    }
-    .parcours4{ /*expérience Lidl barbery*/
-        margin-left: 100px;
     }
     .parcours5{ /*explications parcours*/
         margin-right: 100px;
@@ -434,13 +472,6 @@ body{
     .competence2{ /*explications compétences*/
         margin-right:100px;
     }
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:250px;
-    }
 }
 
 @media screen and (max-width:1500px){
@@ -451,15 +482,7 @@ body{
 
 @media screen and (max-width:1400px){
     .navig{
-        flex-wrap: wrap;
         font-size: 1.3em;
-    }
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:220px;
     }
     .parcours5{
         margin-left:0px;
@@ -469,18 +492,12 @@ body{
     }
     .fonction,
     .secteur,
-    .statut{
-        font-size: 1.6em;
-    }
+    .statut,
     .parcours1,
-    .parcours3{
-        font-size: 1.6em;
-    }
+    .parcours3,
     .competence2,
     .parcours5,
-    .parcours6{
-        font-size:1.6em;
-    }
+    .parcours6,
     .soustitre,
     .contact1{
         font-size:1.6em;
@@ -488,10 +505,15 @@ body{
     #cv{
         font-size:0.8em;
     }
+    #cv:hover{
+        cursor: zoom-in;
+    }
+
+    }
     li{
         font-size:1.5em;
     }
-}
+
 
 @media screen and (max-width:1250px){
     .soustitre{
@@ -502,17 +524,16 @@ body{
     .menu3,
     .menu4,
     .menu5{
-        width:200px;
-        font-size: 1em;
+        font-size: 1.1em;
     }
-    .realisations1,
-    .realisations2,
-    .realisations3{
+    .realisations1 button,
+    .realisations2 button,
+    .realisations3 button{
         width:350px;
         height:200px;
     }
-    .realisations p{
-        font-size:2.5em;
+    .realisations button{
+        font-size:2.1rem;
     }
     .parcours1,
     .parcours2,
@@ -535,11 +556,12 @@ body{
     .competence2{
         margin-right: 50px;
     }
-    .realisations1,
-    .realisations2,
-    .realisations3{
+    .realisations1 button,
+    .realisations2 button,
+    .realisations3 button{
         width:300px;
         height:200px;
+        font-size: 1.5em;
     }
     .contact1{
         font-size:1.3em;
@@ -576,30 +598,21 @@ body{
         height:50px;
         width:auto;
     }
-    .realisations p{
-        font-size:2.2em;
-    }
+
 }
 
 
-@media all and (max-width:1050px){
+@media screen and (max-width:1050px){
     .soustitre{
         margin-bottom: 10px;
     }
     .navig{
         font-size: 1.2em;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
         justify-content: center;
         margin-bottom: 10px;
-    }
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:260px;
-        height:40px;
+        flex-wrap: nowrap
     }
     .competences{
         margin-top: 20px;
@@ -622,14 +635,8 @@ body{
     }
 }
 
-@media all and (max-width:1000px){
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:200px;
-    }
+@media screen and (max-width:1000px){
+
     .formation1{
         margin-bottom:50px;
     }
@@ -667,19 +674,13 @@ body{
     }
 }
 
-@media all and (max-width:950px){
+@media screen and (max-width:950px){
     .navig{
-        font-size: 1.1em;
+        font-size: 1.2em;
         margin-left:10px;
         margin-right: 10px;
     }
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:130px;
-    }
+
     .soustitre{
         margin:20px;
         font-size: 1.5em;
@@ -690,10 +691,10 @@ body{
         justify-content: space-around;
         align-content: center;
     }
-    .realisations1,
-    .realisations2,
-    .realisations3{
-        width:400px;
+    .realisations1 button,
+    .realisations2 button,
+    .realisations3 button{
+        width:450px;
         height:250px;
     }
     .competences{
@@ -722,36 +723,13 @@ body{
 
 }
 
-@media all and (max-width:850px){
+@media screen and (max-width:850px){
     .navig{
         background-color: #694336;
         justify-content:space-around;
         align-items: center;
         margin:0px;
     }
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        border: none;
-        border-radius: 0px;
-        width:auto;
-        margin-bottom:0px;
-    }
-    .menu1:hover,
-    .menu2:hover,
-    .menu3:hover,
-    .menu4:hover,
-    .menu5:hover{
-        border-radius: 0px;
-        background-color:  #865342;
-        opacity:50%;
-    }
-    .navig a{
-        color:white;
-    }
-
     .nom{
         font-size: 2.8em;
     }
@@ -771,15 +749,7 @@ body{
 
 
 
-@media all and (max-width:750px){
-    .menu1,
-    .menu2,
-    .menu3,
-    .menu4,
-    .menu5{
-        width:100px;
-        height:40px;
-    }
+@media screen and (max-width:750px){
     .entete{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -823,7 +793,7 @@ body{
     }
 }
 
-@media all and (max-width:650px){
+@media screen and (max-width:650px){
     .navig{
         font-size: 1.1em;
         justify-content: center;
@@ -864,14 +834,14 @@ body{
         height:40px;
         width:auto;
     }
-    .realisations1,
-    .realisations2,
-    .realisations3{
-        width:350px;
-        height:200px;
+    .realisations1 button,
+    .realisations2 button,
+    .realisations3 button{
+        width:400px;
+        height:250px;
     }
-    .realisations p{
-        font-size:2em;
+    .realisations button{
+        font-size:1.8rem;
     }
     .contact2,
     .contact3,
@@ -887,7 +857,7 @@ body{
     }
 }
 
-@media all and (max-width:600px){
+@media screen and (max-width:600px){
     .entete1{
         width:300px;
     }
@@ -933,7 +903,7 @@ body{
     .parcours3{
         font-size:1.4em;
     }
-    .realisations p{
+    .realisations{
         font-size:1.8em;
     }
     .contact1{
@@ -959,15 +929,6 @@ body{
         justify-content: center;
         align-content: center;
     }
-    .menu1:hover,
-    .menu2:hover,
-    .menu3:hover,
-    .menu4:hover,
-    .menu5:hover{
-        border-radius: 20px;
-        background-color:  #865342;
-        opacity:50%;
-    }
     .soustitre{
         margin-top:-120px;
         position: relative;
@@ -978,7 +939,7 @@ body{
 }
 
 
-@media all and (max-width:550px){
+@media screen and (max-width:550px){
     .soustitre{
         font-size:1.1em;
     }
@@ -1001,7 +962,7 @@ body{
 }
 
 
-@media all and (max-width:500px){
+@media screen and (max-width:500px){
     .entete{
         width:270px;
         margin-bottom: 10px;
@@ -1021,7 +982,7 @@ body{
 }
 
 
-@media all and (max-width:450px){
+@media screen and (max-width:450px){
     .entete{
         width:270px;
         margin-bottom: 10px;
@@ -1030,7 +991,7 @@ body{
         line-height: 10px;
     }
     #entetephoto{
-        margin-left:50px;
+        margin-left:60px;
     }
     .entete1{
         margin-right:0px;
@@ -1053,9 +1014,10 @@ body{
         margin-right: 20px;
         margin-left:20px;
     }
-    .realisations1,
-    .realisations2,
-    .realisations3{
+    .realisations1 button,
+    .realisations2 button,
+    .realisations3 button{
+        width:300px;
         margin-right: 20px;
         margin-left:20px;
     }
@@ -1063,7 +1025,7 @@ body{
 }
 
 
-@media all and (max-width:400px){
+@media screen and (max-width:400px){
     #entetephoto{
         margin-left:-120px;
         margin-top:-40px;
